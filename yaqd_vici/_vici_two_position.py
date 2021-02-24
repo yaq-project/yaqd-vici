@@ -13,10 +13,8 @@ class ViciTwoPosition(IsDiscrete, HasPosition, IsDaemon):
         super().__init__(name, config, config_filepath)
         # Perform any unique initialization
 
-
     def _set_position(self, position):
         ...
-
 
     async def update_state(self):
         """Continually monitor and update the current daemon state."""
