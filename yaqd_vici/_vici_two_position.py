@@ -3,10 +3,10 @@ __all__ = ["ViciTwoPosition"]
 import asyncio
 from typing import Dict, Any, List
 
-from yaqd_core import DiscreteHardware
+from yaqd_core import IsDiscrete, HasPosition, IsDaemon
 
 
-class ViciTwoPosition(DiscreteHardware):
+class ViciTwoPosition(IsDiscrete, HasPosition, IsDaemon):
     _kind = "vici-two-position"
 
     def __init__(self, name, config, config_filepath):
