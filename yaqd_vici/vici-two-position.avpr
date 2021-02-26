@@ -1,5 +1,9 @@
 {
     "config": {
+        "baud_rate": {
+            "origin": "uses-uart",
+            "type": "int"
+        },
         "device_id": {
             "default": null,
             "doc": "VICI device ID, an integer from 0 to 9. If unspecified, will assume no ID. You must manually program your control modules with IDs, yaq will not attempt to apply IDs.",
@@ -15,7 +19,10 @@
             "type": "boolean"
         },
         "identifiers": {
-            "default": {},
+            "default": {
+                "A": 0,
+                "B": 1
+            },
             "doc": "Position identifiers",
             "origin": "is-discrete",
             "type": {
@@ -77,6 +84,10 @@
                 "null",
                 "string"
             ]
+        },
+        "serial_port": {
+            "origin": "uses-uart",
+            "type": "string"
         }
     },
     "doc": "",
@@ -145,6 +156,17 @@
             "origin": "is-daemon",
             "request": [],
             "response": "boolean"
+        },
+        "direct_serial_write": {
+            "doc": "Expose direct access to the serial port to clients.\n\nThis should not be encouraged for normal use, but may be very important for debugging.\nIf a device is expected to return data, it should be logged at the INFO level, not returned to the client.\nThis is done to allow long tasks to be run asynchronously, and to explicitly discourage use of this method except when debugging.\nSetting `busy` to true is encouraged, but individual daemon writers should consider their own use case.\n",
+            "origin": "uses-serial",
+            "request": [
+                {
+                    "name": "message",
+                    "type": "bytes"
+                }
+            ],
+            "response": "null"
         },
         "get_config": {
             "doc": "Full configuration for the individual daemon as defined in the TOML file.\nThis includes defaults and shared settings not directly specified in the daemon-specific TOML table.\n",
@@ -285,9 +307,11 @@
         }
     },
     "traits": [
-        "is-daemon",
+        "uses-uart",
+        "has-position",
+        "uses-serial",
         "is-discrete",
-        "has-position"
+        "is-daemon"
     ],
     "types": [
         {

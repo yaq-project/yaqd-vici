@@ -1,6 +1,6 @@
 protocol = "vici-two-position"
 doc = ""
-traits = ["is-daemon", "has-position", "is-discrete"]
+traits = ["uses-uart", "uses-serial", "is-daemon", "has-position", "is-discrete"]
 hardware = ["vici:e2ca", "vici:edma"]
 
 [links]
@@ -16,3 +16,6 @@ PyPI = "https://pypi.org/project/yaqd-vici"
 doc = "VICI device ID, an integer from 0 to 9. If unspecified, will assume no ID. You must manually program your control modules with IDs, yaq will not attempt to apply IDs."
 type = ["int", "null"]
 default = "__null__"
+
+[config.identifiers]
+default = {"A"=0, "B"=1}
