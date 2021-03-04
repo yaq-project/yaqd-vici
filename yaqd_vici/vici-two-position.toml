@@ -9,6 +9,7 @@ bugtracker = "https://gitlab.com/yaq/yaqd-vici/-/issues"
 
 [installation]
 PyPI = "https://pypi.org/project/yaqd-vici"
+conda-forge = "https://anaconda.org/conda-forge/yaqd-vici"
 
 [config]
 

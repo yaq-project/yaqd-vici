@@ -144,7 +144,8 @@
         "vici:edma"
     ],
     "installation": {
-        "PyPI": "https://pypi.org/project/yaqd-vici"
+        "PyPI": "https://pypi.org/project/yaqd-vici",
+        "conda-forge": "https://anaconda.org/conda-forge/yaqd-vici"
     },
     "links": {
         "bugtracker": "https://gitlab.com/yaq/yaqd-vici/-/issues",
@@ -307,11 +308,11 @@
         }
     },
     "traits": [
-        "uses-uart",
-        "has-position",
-        "uses-serial",
+        "is-daemon",
         "is-discrete",
-        "is-daemon"
+        "uses-uart",
+        "uses-serial",
+        "has-position"
     ],
     "types": [
         {
