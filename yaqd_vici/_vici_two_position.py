@@ -52,7 +52,6 @@ class ViciTwoPosition(UsesUart, UsesSerial, IsDiscrete, HasPosition, IsDaemon):
             message += "\r"
             message = message.encode()
             response = await self._serial.awrite_then_readline(message)
-            print(message, response)
             try:
                 response = response.decode()
             except UnicodeDecodeError:

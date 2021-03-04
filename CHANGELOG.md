@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - conda-forge as installation source
 
+### Fixed
+- removed inappropriate print statement
+
 ## [2021.2.0]
 
 ### Added
