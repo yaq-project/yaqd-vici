@@ -308,11 +308,11 @@
         }
     },
     "traits": [
+        "has-position",
         "is-daemon",
         "is-discrete",
-        "uses-uart",
         "uses-serial",
-        "has-position"
+        "uses-uart"
     ],
     "types": [
         {
