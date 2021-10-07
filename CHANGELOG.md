@@ -20,3 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - initial release
+
+[Unreleased]: https://gitlab.com/yaq/yaqd-vici/-/compare/v2021.10.0...master
+[2021.10.0]: https://gitlab.com/yaq/yaqd-vici/-/compare/v2021.2.0...v2021.2.0
+[2021.2.0]: https://gitlab.com/yaq/yaqd-vici/-/tags/v2021.2.0
+
