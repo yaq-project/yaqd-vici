@@ -4,10 +4,6 @@
             "origin": "uses-uart",
             "type": "int"
         },
-        "interface":{
-            "default": "RS232",
-            "type": "string",
-        },
         "device_id": {
             "default": null,
             "doc": "VICI device ID, an integer from 0 to 9. If unspecified, will assume no ID. You must manually program your control modules with IDs, yaq will not attempt to apply IDs.",
