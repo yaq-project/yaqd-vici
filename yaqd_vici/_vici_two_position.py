@@ -19,7 +19,6 @@ class ViciTwoPosition(UsesUart, UsesSerial, IsDiscrete, HasPosition, IsDaemon):
             self._serial = aserial.ASerial()
             self._serial.port = self._config["serial_port"]
             self._serial.baudrate = self._config["baud_rate"]
-            self._serial.interface = self._config["interface"]
             self._serial.eol = b"\r"
             self._serial.open()
             ViciTwoPosition._serial_objects[self._config["serial_port"]] = self._serial

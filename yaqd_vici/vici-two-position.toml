@@ -20,3 +20,8 @@ default = "__null__"
 
 [config.identifiers]
 default = {"A"=0, "B"=1}
+
+[config.interface]
+doc = "VICI uses slightly different commands for RS232 vs RS485. You must tell yaq if you require RS485 style commands."
+type = {"type"="enum", "name"="interface", "symbols"=["RS232", "RS485"]}
+default = "RS232"

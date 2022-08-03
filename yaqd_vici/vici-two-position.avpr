@@ -4,10 +4,6 @@
             "origin": "uses-uart",
             "type": "int"
         },
-        "interface":{
-            "default": "RS232",
-            "type": "string",
-        },
         "device_id": {
             "default": null,
             "doc": "VICI device ID, an integer from 0 to 9. If unspecified, will assume no ID. You must manually program your control modules with IDs, yaq will not attempt to apply IDs.",
@@ -32,6 +28,18 @@
             "type": {
                 "type": "map",
                 "values": "double"
+            }
+        },
+        "interface": {
+            "default": "RS232",
+            "doc": "VICI uses slightly different commands for RS232 vs RS485. You must tell yaq if you require RS485 style commands.",
+            "type": {
+                "name": "interface",
+                "symbols": [
+                    "RS232",
+                    "RS485"
+                ],
+                "type": "enum"
             }
         },
         "log_level": {
@@ -251,13 +259,13 @@
     },
     "properties": {
         "destination": {
-            "control_kind": "normal",
+            "control_kind": "hinted",
             "dynamic": true,
             "getter": "get_destination",
             "limits_getter": null,
             "options_getter": null,
             "record_kind": "data",
-            "setter": null,
+            "setter": "set_position",
             "type": "double",
             "units_getter": "get_units"
         },
@@ -268,7 +276,7 @@
             "limits_getter": null,
             "options_getter": null,
             "record_kind": "data",
-            "setter": "set_position",
+            "setter": null,
             "type": "double",
             "units_getter": "get_units"
         },
