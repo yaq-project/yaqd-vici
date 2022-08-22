@@ -1,11 +1,11 @@
 protocol = "vici-two-position"
 doc = ""
 traits = ["uses-uart", "uses-serial", "is-daemon", "has-position", "is-discrete"]
-hardware = ["vici:e2ca", "vici:edma"]
+hardware = ["vici:e2ca", "vici:edma", "vici:eudf"]
 
 [links]
-source = "https://gitlab.com/yaq/yaqd-vici"
-bugtracker = "https://gitlab.com/yaq/yaqd-vici/-/issues"
+source = "https://github.com/yaq-project/yaqd-vici/"
+bugtracker = "https://github.com/yaq-project/yaqd-vici/issues"
 
 [installation]
 PyPI = "https://pypi.org/project/yaqd-vici"
