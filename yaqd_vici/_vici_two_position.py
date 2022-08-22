@@ -40,8 +40,12 @@ class ViciTwoPosition(UsesUart, UsesSerial, IsDiscrete, HasPosition, IsDaemon):
         else:
             to_write += "CW"  # position A
         # finish
-        self._serial.write((to_write + "\r").encode())
-        self._serial.flush()
+        if self._config["interface"] == "RS485":
+            self._serial.write(("/Z" + to_write + "\r").encode())
+            self._serial.flush()
+        else:
+            self._serial.write((to_write + "\r").encode())
+            self._serial.flush()
 
     async def update_state(self):
         while True:
