@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2022.8.0]
+
+### Added
+- support for valves using RS485
+
 ### Changed
 - rerendered avpr corresponding to yaq-traits 2022.3.0
 
@@ -24,7 +29,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - initial release
 
-[Unreleased]: https://gitlab.com/yaq/yaqd-vici/-/compare/v2021.10.0...main
-[2021.10.0]: https://gitlab.com/yaq/yaqd-vici/-/compare/v2021.2.0...v2021.2.0
-[2021.2.0]: https://gitlab.com/yaq/yaqd-vici/-/tags/v2021.2.0
+[Unreleased]: https://github.com/yaq-project/yaqd-vici/-/compare/v2022.8.0...main
+[2022.8.0]: https://github.com/yaq-project/yaqd-vici/-/compare/v2021.10.0...2022.8.0
+[2021.10.0]: https://github.com/yaq-project/yaqd-vici/-/compare/v2021.2.0...v2021.10.0
+[2021.2.0]: https://github.com/yaq-project/yaqd-vici/-/tags/v2021.2.0
 
