@@ -1,7 +1,7 @@
 protocol = "vici-two-position"
 doc = ""
 traits = ["uses-uart", "uses-serial", "is-daemon", "has-position", "is-discrete"]
-hardware = ["vici:e2ca", "vici:edma", "vici:eudf"]
+hardware = ["vici:e2ca", "vici:edma", "vici:eudf", "vici:ehma"]
 
 [links]
 source = "https://github.com/yaq-project/yaqd-vici/"
